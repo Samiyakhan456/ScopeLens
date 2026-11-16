@@ -1,0 +1,74 @@
+AI USAGE NOTES — SCOPELENS
+
+Project: ScopeLens — Tender & Scope-of-Work Relevance Scanner
+Repository: https://github.com/Samiyakhan456/ScopeLens
+
+AI tools were used during development as an assistance tool for understanding concepts, designing the application structure, implementing selected components, debugging, and improving the overall solution.
+
+The generated suggestions were reviewed, adapted to the project requirements, integrated, and tested during development.
+
+--------------------------------------------------
+1. APPLICATION ARCHITECTURE AND IMPLEMENTATION
+--------------------------------------------------
+
+Prompt (summarised from the development interaction):
+
+"Help me design and implement a full-stack web application using React for the frontend and Node.js with Express for the backend. The application should allow users to upload multiple PDF and DOCX tender documents, extract their text, identify relevant Tritorc keywords, calculate document relevance, and export the results into an Excel report."
+
+AI assistance:
+- Suggested application architecture and separation of frontend and backend responsibilities.
+- Assisted with understanding REST API communication and document-processing workflows.
+- Provided implementation guidance for file uploads and document extraction.
+
+Modifications and validation:
+- Integrated the suggested components into the existing project structure.
+- Adapted the implementation to the assignment requirements.
+- Tested PDF and DOCX extraction through the application.
+
+--------------------------------------------------
+2. KEYWORD MATCHING AND RELEVANCE SCORING
+--------------------------------------------------
+
+Prompt (summarised from the development interaction):
+
+"Help implement a keyword-matching system that identifies configured industrial keywords in extracted document text. It should support case-insensitive phrase matching, simple plural variations, distinct keyword counting, and relevance classification based on the number of matched keywords."
+
+AI assistance:
+- Assisted with keyword-matching logic and text normalisation.
+- Explained distinct keyword counting versus total occurrences.
+- Helped implement relevance classification thresholds.
+
+Modifications and validation:
+- Adapted the matching logic to the configured Tritorc keyword list.
+- Tested uppercase/lowercase matching and plural variations.
+- Verified relevance classifications for 0, 1, 2, 3, and higher keyword matches.
+- Tested repeated keyword occurrences to ensure they do not inflate the distinct keyword count.
+
+--------------------------------------------------
+3. SUPPLEMENTARY TERMINOLOGY AND EXCEL REPORTING
+--------------------------------------------------
+
+Prompt (summarised from the development interaction):
+
+"Help extend the document scanner to identify additional industrial terminology separately from the official keyword matches. Also generate a structured and professionally formatted Excel report containing document names, matched keywords, match counts, relevance classifications, and supplementary terminology."
+
+AI assistance:
+- Assisted with the supplementary terminology detection approach.
+- Provided guidance on generating Excel workbooks using ExcelJS.
+- Suggested report formatting and organisation.
+
+Modifications and validation:
+- Kept supplementary terminology separate from official keyword relevance scoring.
+- Adapted the Excel report structure to the application results.
+- Reviewed the generated report and adjusted its formatting and row heights.
+- Verified the report through the frontend download workflow.
+
+--------------------------------------------------
+AI USAGE SUMMARY
+--------------------------------------------------
+
+AI tools were used for development assistance, implementation guidance, debugging, and documentation.
+
+AI-generated suggestions were not treated as automatically correct. They were reviewed, adapted to the project, and tested against the application's expected behaviour.
+
+The final implementation was integrated into the ScopeLens codebase and validated through manual testing of document uploads, keyword matching, relevance scoring, and Excel report generation.
