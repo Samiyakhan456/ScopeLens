@@ -1,0 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #231815;
+  background: #F5EFC6;
+
+  --yellow: #F5EFC6;
+  --red: #4D0E12;
+  --blue: #A5BCD6;
+  --soil: #4A2E27;
+  --brown: #231815;
+
+  --display-font: 'Bodoni Moda', serif;
+  --serif-font: 'Libre Baskerville', serif;
+  --body-font: 'DM Sans', sans-serif;
+  --mono-font: 'IBM Plex Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--body-font);
+  background: var(--yellow);
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1, h2, h3 {
+  font-family: var(--display-font);
+  font-weight: 500;
+  color: var(--red);
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+  isolation: isolate;
+}

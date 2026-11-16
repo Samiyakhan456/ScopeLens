@@ -1,0 +1,126 @@
+
+.bubble-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform;
+  animation: float 18s ease-in-out infinite alternate;
+}
+
+/* Cerulean blue */
+.bubble-blue {
+  background: radial-gradient(
+    circle at 35% 30%,
+    #eef0e9 0%,
+    #A5BCD6 65%,
+    #8da7c2 100%
+  );
+  opacity: 0.52;
+}
+
+/* Transparent yellow */
+.bubble-yellow {
+  background: radial-gradient(
+    circle at 35% 30%,
+    #fffdf0 0%,
+    #F5EFC6 65%,
+    #e5dca9 100%
+  );
+  opacity: 0.72;
+}
+
+/* Java brown */
+.bubble-brown {
+  background: radial-gradient(
+    circle at 35% 30%,
+    #d9b9a4 0%,
+    #4A2E27 100%
+  );
+  opacity: 0.30;
+}
+
+.bubble-one {
+  width: 360px;
+  height: 360px;
+  top: 12%;
+  left: 18%;
+  animation-duration: 22s;
+}
+
+.bubble-two {
+  width: 230px;
+  height: 230px;
+  top: 8%;
+  right: 15%;
+  animation-duration: 26s;
+  animation-delay: -5s;
+}
+
+.bubble-three {
+  width: 190px;
+  height: 190px;
+  top: 48%;
+  left: 48%;
+  animation-duration: 20s;
+  animation-delay: -8s;
+}
+
+.bubble-four {
+  width: 300px;
+  height: 300px;
+  bottom: 5%;
+  right: 5%;
+  animation-duration: 25s;
+  animation-delay: -12s;
+}
+
+.bubble-five {
+  width: 150px;
+  height: 150px;
+  bottom: 18%;
+  left: 28%;
+  animation-duration: 19s;
+  animation-delay: -3s;
+}
+
+@keyframes float {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(35px, -45px, 0);
+  }
+  100% {
+    transform: translate3d(-25px, 35px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bubble {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .bubble-one {
+    width: 220px;
+    height: 220px;
+  }
+
+  .bubble-two {
+    width: 150px;
+    height: 150px;
+  }
+
+  .bubble-four {
+    width: 200px;
+    height: 200px;
+  }
+}

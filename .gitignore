@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# macOS
+.DS_Store
+
+# Generated Excel reports
+*.xlsx
+*.xls
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
