@@ -1,11 +1,20 @@
 # ScopeLens
 ### Tender & Scope-of-Work Relevance Scanner for Tritorc
 
-ScopeLens is a full-stack web application designed to automate the initial screening of tender and Scope-of-Work (SOW) documents for relevance to Tritorc's industrial bolting and related services.
+**ScopeLens** is a full-stack web application designed to automate the initial screening of tender and Scope-of-Work (SOW) documents for relevance to Tritorc's industrial bolting and related services.
 
 The application allows users to upload multiple PDF and DOCX documents, extract their text, identify relevant keywords, calculate document relevance, and export the results into a structured Excel report.
 
 By automating keyword-based document screening, ScopeLens helps reduce the effort involved in manually reviewing multiple tender documents.
+
+## Live Application
+
+- **Frontend:** https://scope-lens-jet.vercel.app
+- **Backend API:** https://scopelens-backend.onrender.com
+- **Backend Health Check:** https://scopelens-backend.onrender.com/api/health
+- **GitHub Repository:** https://github.com/Samiyakhan456/ScopeLens
+
+The application is deployed using Vercel for the frontend and Render for the backend. Its core upload, extraction, matching, scoring, and Excel export workflows have been tested.
 
 ---
 
@@ -64,13 +73,15 @@ Supplementary terminology does not contribute to the official relevance score.
 | Frontend | React, Vite |
 | Styling | CSS |
 | Backend | Node.js, Express.js |
-| API Communication | REST API, Axios |
+| API Communication | REST API, Fetch API |
 | PDF Extraction | pdf-parse |
 | DOCX Extraction | Mammoth |
 | Keyword Processing | JavaScript |
 | Excel Generation | ExcelJS |
 | Keyword Configuration | CSV, JSON |
 | Version Control | Git, GitHub |
+| Frontend Hosting | Vercel |
+| Backend Hosting | Render |
 
 ---
 
@@ -186,6 +197,8 @@ ScopeLens/
 │       └── testScorer.js
 │
 ├── .gitignore
+├── AI_NOTES.txt
+├── DEPLOY.md
 └── README.md
 ```
 
@@ -240,6 +253,7 @@ Keep environment files private and never commit actual secrets to GitHub.
 |---|---|---|
 | POST | `/api/scan` | Upload and scan documents, returning analysis results |
 | POST | `/api/scan/excel` | Process uploaded documents and generate an Excel report |
+| GET | `/api/health` | Check backend service availability |
 
 ---
 
@@ -279,7 +293,7 @@ Potential areas for further development include:
 - Semantic similarity and contextual relevance detection.
 - Advanced linguistic matching and terminology expansion.
 - Expanded automated testing.
-- Cloud deployment and production monitoring.
+- Production logging, error monitoring, and performance improvements.
 
 ---
 
