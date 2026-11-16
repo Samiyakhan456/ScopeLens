@@ -9,7 +9,7 @@ The application uses a separate frontend and backend, so they can be deployed in
 - Backend: Render
 - Source code: GitHub
 
-**Deployment status:** Deployment instructions and configuration plan. A production deployment has not yet been completed.
+**Deployment status:** Deployment status: Successfully deployed. The frontend is hosted on Vercel and the backend is hosted on Render.
 
 ---
 
@@ -55,6 +55,7 @@ The frontend communicates with the backend through REST API endpoints. The backe
 ## 2. Frontend Deployment — Vercel
 
 The React application can be hosted on Vercel.
+**Live Frontend URL:** https://scope-lens-jet.vercel.app
 
 ### Steps
 
@@ -85,13 +86,16 @@ After configuration, deploy the application.
 
 Vercel will provide a production frontend URL similar to:
 
-`https://<your-project>.vercel.app`
+'https://scope-lens-jet.vercel.app'
 
 ---
 
 ## 3. Backend Deployment — Render
 
 The Node.js and Express backend can be hosted on Render.
+**Live Backend URL:** https://scopelens-backend.onrender.com
+
+**Health Check:** https://scopelens-backend.onrender.com/api/health
 
 ### Steps
 
@@ -120,7 +124,7 @@ The backend should use `process.env.PORT` and listen on the port supplied by the
 
 Render will provide a backend URL similar to:
 
-`https://<your-backend>.onrender.com`
+'https://scopelens-backend.onrender.com'
 
 ---
 
@@ -131,7 +135,7 @@ Since the frontend and backend are hosted on separate domains, Cross-Origin Reso
 The backend should allow:
 
 - The local development frontend: `http://localhost:5173`
-- The deployed Vercel frontend: `https://<your-project>.vercel.app`
+- The deployed Vercel frontend: `https://scope-lens-jet.vercel.app`
 
 For production, configure CORS to allow the intended frontend origin rather than relying on unrestricted cross-origin access.
 
@@ -153,7 +157,7 @@ The production frontend should send requests to the deployed backend URL.
 Example:
 
 ```text
-https://<your-backend-domain>/api/scan
+https://scopelens-backend.onrender.com/api/scan
 ```
 
 ---
@@ -199,4 +203,4 @@ Potential improvements include:
 
 ---
 
-**Note:** This document describes the proposed deployment process. Production URLs, hosting configuration, and deployment verification results should be added after an actual deployment.
+**Note:** ScopeLens has been deployed and its core functionality has been verified using PDF and DOCX uploads, keyword matching, relevance scoring, supplementary terminology detection, and Excel report generation.
