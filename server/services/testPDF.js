@@ -2,7 +2,12 @@ const fs = require("fs");
 const extractPDF = require("./pdfExtractor");
 
 async function test() {
-    const filePath = "/Users/samiyakhan/Downloads/Fwd__Internship_Assignment_-_A/GeM-Bidding-9563430.pdf";
+    const filePath = process.argv[2];
+
+    if (!filePath) {
+        console.error("Usage: node services/testPDF.js <path-to-pdf>");
+        process.exit(1);
+    }
 
     const buffer = fs.readFileSync(filePath);
     const text = await extractPDF(buffer);
